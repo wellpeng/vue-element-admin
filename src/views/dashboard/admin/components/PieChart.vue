@@ -1,5 +1,5 @@
 <template>
-  <div :class="className" :style="{height:height,width:width}"/>
+  <div :class="className" :style="{height:height,width:width,background:background}" />
 </template>
 
 <script>
@@ -19,7 +19,15 @@ export default {
     },
     height: {
       type: String,
-      default: '300px'
+      default: '100%'
+    },
+    paddingBottom: {
+      type: String,
+      default: '100%'
+    },
+    background: {
+      type: String,
+      default: '#fff'
     }
   },
   data() {
@@ -45,7 +53,9 @@ export default {
     this.chart = null
   },
   methods: {
+    initChart1() {},
     initChart() {
+      // console.info('this.$el height: ' + this.$parent.baseHeight)
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
@@ -64,8 +74,8 @@ export default {
             name: 'WEEKLY WRITE ARTICLES',
             type: 'pie',
             roseType: 'radius',
-            radius: [15, 95],
-            center: ['50%', '38%'],
+            // radius: [15, 95],
+            // center: ['50%', '38%'],
             data: [
               { value: 320, name: 'Industries' },
               { value: 240, name: 'Technology' },

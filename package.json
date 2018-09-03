@@ -60,7 +60,11 @@
     "vue-splitpane": "1.0.2",
     "vuedraggable": "^2.16.0",
     "vuex": "3.0.1",
-    "xlsx": "^0.11.16"
+    "xlsx": "^0.11.16",
+    "vue-power-drag": "^0.2.0",
+    "lodash": "4.17.10",
+    "jquery": "^3.3.1",
+    "gridster": "^0.5.6"
   },
   "devDependencies": {
     "autoprefixer": "8.5.0",
